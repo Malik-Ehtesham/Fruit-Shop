@@ -84,13 +84,16 @@ export default function SwipeableTemporaryDrawer() {
   );
 
   return (
-    <div className="relative">
-      <div className="fixed top-5  right-5">
+    <div className="  z-20">
+      <div className=" top-4 right-4">
         {["left"].map((anchor) => (
           <React.Fragment key={anchor}>
-            <Button onClick={toggleDrawer(anchor, true)}>
-              <MenuIcon fontSize="large" className="text-black" />
-            </Button>
+            <div className=" flex w-screen justify-between">
+              <img src="/Mainlogo.png" className="w-36 m-2" />
+              <Button onClick={toggleDrawer(anchor, true)} className="">
+                <MenuIcon fontSize="large" className="text-black" />
+              </Button>
+            </div>
             <SwipeableDrawer
               anchor={anchor}
               open={state[anchor]}

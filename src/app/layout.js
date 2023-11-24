@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar/Navbar";
 import "./globals.css";
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata = {
   title: "Create Next App",
@@ -10,8 +11,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="bumblebee" className="bg-white">
-      <Header />
-      <body className="">{children}</body>
+      <body className="">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
